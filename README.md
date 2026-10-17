@@ -1,17 +1,27 @@
 # Alitiora Initiative
 
-Organization website for [Alitiora Initiative](https://github.com/Alitiora-Initiative). Kenya. Operator: Joseph Mushelle Nyingeh · [jaymnyon@gmail.com](mailto:jaymnyon@gmail.com).
+Portal for every public repository under [Alitiora Initiative](https://github.com/Alitiora-Initiative).
 
 | | |
 |---|---|
-| **This site** | [alitiora-initiative.vercel.app](https://alitiora-initiative.vercel.app) |
-| **Source** | [Alitiora-Initiative/alitiora-initiative](https://github.com/Alitiora-Initiative/alitiora-initiative) |
-| **Pages** | Home, About, Work, Principles, Contact |
+| **Live** | [alitiora-initiative.vercel.app](https://alitiora-initiative.vercel.app) |
+| **Operator** | Joseph Mushelle Nyingeh, Kenya |
+| **Contact** | [jaymnyon@gmail.com](mailto:jaymnyon@gmail.com) |
 
-## What the site covers
+## Pages
 
-- **Space Ledger** — Solana Devnet canvas. Primary sale, on-chain receipts. Not mainnet, not a secondary market. Live: [space-ledger-alitiora.vercel.app](https://space-ledger-alitiora.vercel.app). Code: [Space-Ledger](https://github.com/Alitiora-Initiative/Space-Ledger).
-- **MIRA** — separate trading experiment. Not part of the Space Ledger sale. Code: [MIRA](https://github.com/Alitiora-Initiative/MIRA). Dashboard: [web-dashboard-jolse.vercel.app](https://web-dashboard-jolse.vercel.app). Read the warning in that repository before running it.
+Home, Products, Stack, About, Contact. `/work` redirects to Products.
+
+## Linked products
+
+| Product | Code | Live |
+|---|---|---|
+| Space Ledger | [Space-Ledger](https://github.com/Alitiora-Initiative/Space-Ledger) | [space-ledger-alitiora.vercel.app](https://space-ledger-alitiora.vercel.app) |
+| MIRA | [MIRA](https://github.com/Alitiora-Initiative/MIRA) | [web-dashboard-jolse.vercel.app](https://web-dashboard-jolse.vercel.app) |
+| This site | this repository | [alitiora-initiative.vercel.app](https://alitiora-initiative.vercel.app) |
+| Org profile | [.github](https://github.com/Alitiora-Initiative/.github) | [github.com/Alitiora-Initiative](https://github.com/Alitiora-Initiative) |
+
+Repo counts on the home page are read from the public GitHub API. If that call fails, the page falls back to this catalog.
 
 ## Local
 
@@ -20,19 +30,9 @@ npm install
 npm run dev
 ```
 
-Production build:
-
 ```bash
+npm run typecheck
 npm run build
 ```
 
-Framework: TanStack Start, React, Tailwind. Node 22 on Vercel.
-
-## Organization
-
-| Repository | Role |
-|---|---|
-| [Space-Ledger](https://github.com/Alitiora-Initiative/Space-Ledger) | Devnet product |
-| [MIRA](https://github.com/Alitiora-Initiative/MIRA) | Trading experiment |
-| [alitiora-initiative](https://github.com/Alitiora-Initiative/alitiora-initiative) | This website |
-| [.github](https://github.com/Alitiora-Initiative/.github) | Organization profile (`profile/README.md`) |
+Node 22. Pushes to `main` run [.github/workflows/ci.yml](.github/workflows/ci.yml). Vercel Hobby should redeploy from the same branch when the project is connected to this repository.
